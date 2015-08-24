@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    // Load the url into the webview
+    NSURL *url = [NSURL URLWithString:@"http://sds-apps.test.blog.bdop.se/teamfeed"];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
 - (void)didReceiveMemoryWarning {
